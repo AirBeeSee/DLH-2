@@ -17,6 +17,6 @@ jobs:
       env:
         DOCKER_USER: ${{secrets.DOCKER_USER}}
       run: |
-        docker build . --file Dockerfile --tag $DOCKER_USER/todolist:latest
+        docker build . --file Dockerfile --tag $DOCKER_USER/pprrlist:latest
     - run: docker logout
 
