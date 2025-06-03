@@ -19,5 +19,12 @@ jobs:
         DOCKER_USER: ${{secrets.DOCKER_USER}}
       run: |
         docker build . --file MyDockerfile --tag $DOCKER_USER/pprrlist:latest
+    - name: Docker push
+      env:
+        DOCKER_USER: ${{secrets.DOCKER_USER}}
+      run: |
+        docker push $DOCKER_USER/pprrlist:latest
+
+        
     - run: docker logout
 
